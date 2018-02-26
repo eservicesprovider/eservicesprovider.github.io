@@ -121,7 +121,7 @@ a:focus, a:hover {
 }
 body {
     padding: 3em 0;
-    background: url(../images/bg.gif); 
+    background: url(../images/bg.jpg); 
 	background-attachment:fixed;
 	background-size:cover;
 }
