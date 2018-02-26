@@ -121,7 +121,7 @@ a:focus, a:hover {
 }
 body {
     padding: 3em 0;
-    background: url(../images/plexus.gif); 
+    background: url(../images/bg.gif); 
 	background-attachment:fixed;
 	background-size:cover;
 }
