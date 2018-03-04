@@ -201,15 +201,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
 	  //show logout button
-	  if(googleUser){
-	  	$("google-auth-button").text("<a href='#' onclick='signOut();''>Sign out</a>");	  	
-	  }
+	  $("google-auth-button").text("<a href='#' onclick='signOut();''>Sign out</a>");	  	
 
-	  //check if already registered
-	  //if not, pushup form
-	  //create cookie nd storage
 	  //redirect to admin
-	}
+	  var url = "apps/admin";    
+      $(location).attr('href',url);
+    }
 
 	function signOut() {
 	    var auth2 = gapi.auth2.getAuthInstance();
