@@ -30,7 +30,7 @@ var appStart = function() {
  * Initializes Signin v2 and sets up listeners.
  */
 var initSigninV2 = function() {
-	
+
   auth2 = gapi.auth2.init({
       client_id: 'CLIENT_ID.apps.googleusercontent.com',
       scope: 'profile'
@@ -152,6 +152,11 @@ function readFromLocalDB(){}
 function writeBlockChainValue(){}
 
 function readBlockChainValue(){}
+
+function registerSocialMediaAccount(){}
+
+//social media
+function shareToSocialMedia(){}
 
 //messages
 
