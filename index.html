@@ -22,6 +22,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/main.js"></script>
 <!-- //custom-theme -->
 <!-- Google fonts -->
 <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
@@ -193,23 +194,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	});
 
 
-	function onSignIn(googleUser) {
-	  var profile = googleUser.getBasicProfile();
-	  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-	  console.log('Name: ' + profile.getName());
-	  console.log('Image URL: ' + profile.getImageUrl());
-	  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
-	  //show logout button
-	  $("google-auth-button").text("<a href='#' onclick='signOut();''>Sign out</a> &nbsp  &nbsp <a class='read' href='app/admin'> Admin </a> <button type='button' class='btn btn-outline-primary'>Primary</button>");	 
-
-    }
-
-	function signOut() {
-	    var auth2 = gapi.auth2.getAuthInstance();
-	    auth2.signOut().then(function () {
-	      console.log('User signed out.');
-	});
   }
 
 
