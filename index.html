@@ -17,6 +17,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
 <meta HTTP-EQUIV="EXPIRES" CONTENT="-1" />
 <meta name="google-signin-client_id" content="146844684925-pa2fsuvmqu4e0s5t95tiila5edncoqom.apps.googleusercontent.com">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -64,18 +66,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<p>A market place for re-usable components and services. Don't buy development hours, instead buy already proven and developed components from the worlds best developers and service providers.</p>
 				<div class="content3">
 					<ul>
-						<li><a class="" href="#"> Buy </a></li>
-						<li><a class="read" href="#"> Sell </a></li>
+						<li><a class="" href="apps/shop"> Buy </a></li>
+						<li><a class="read" href="apps/list"> Sell </a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<div class="register-right">
 			<div class="register-in">
-				<div class="g-signin2" data-onsuccess="onSignIn"></div>
+				<div class="g-signin2" data-onsuccess="onSignIn" ></div>
 			</div>
 			<div class="register-in middle">
-				<a  data-wow-delay=".5s" href="training\index.html">Grow Skills »</a>
+				<div id="google-auth-button"><a  data-wow-delay=".5s" href="training\index.html">Grow Skills »</a></div>
 			</div>
 			<div class="register-in">
 				<a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s" href="#small-dialog1">Subscribe here »</a>
@@ -183,6 +185,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		removalDelay: 300,
 		mainClass: 'my-mfp-zoom-in'
 	});
+
+	//check if signin
+	    
+
 																	
 	});
 
@@ -194,11 +200,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	  console.log('Image URL: ' + profile.getImageUrl());
 	  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
+	  //show logout button
+	  if(googleUser){
+	  	$("google-auth-button").text("<a href='#' onclick='signOut();''>Sign out</a>");	  	
+	  }
+
 	  //check if already registered
 	  //if not, pushup form
 	  //create cookie nd storage
 	  //redirect to admin
 	}
+
+	function signOut() {
+	    var auth2 = gapi.auth2.getAuthInstance();
+	    auth2.signOut().then(function () {
+	      console.log('User signed out.');
+	});
+  }
 
 
 </script>
