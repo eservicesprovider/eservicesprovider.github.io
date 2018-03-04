@@ -72,7 +72,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="register-right">
 			<div class="register-in">
-				<a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s" href="#small-dialog2">Signup here »</a>
+				<div class="g-signin2" data-onsuccess="onSignIn"></div>
 			</div>
 			<div class="register-in middle">
 				<a  data-wow-delay=".5s" href="training\index.html">Grow Skills »</a>
@@ -185,6 +185,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	});
 																	
 	});
+
+
+	function onSignIn(googleUser) {
+	  var profile = googleUser.getBasicProfile();
+	  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+	  console.log('Name: ' + profile.getName());
+	  console.log('Image URL: ' + profile.getImageUrl());
+	  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+
+	  //check if already registered
+	  //if not, pushup form
+	  //create cookie nd storage
+	  //redirect to admin
+	}
+
+
 </script>
 <!--//popup-js-->
 
