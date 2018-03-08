@@ -120,7 +120,8 @@ function onSignIn(googleUser) {
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
   //show logout button
-  $("#google-auth-button").text("<a href='#' onclick='signOut();''>Sign out</a> &nbsp  &nbsp <a class='read' href='app/admin'> Admin </a> <button type='button' class='btn btn-outline-primary'>Primary</button>");	 
+  //$("#google-auth-button").text("<a href='#' onclick='signOut();''>Sign out</a> &nbsp  &nbsp <a class='read' href='app/admin'> Admin </a> <button type='button' class='btn btn-outline-primary'>Primary</button>");	 
+  $("location").attr('href', 'http://eprofitservice.com/app/admin');
 }
 
 function signOut() {
