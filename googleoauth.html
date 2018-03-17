@@ -88,15 +88,16 @@
       }
       // Load the API and make an API call.  Display the results on the screen.
       function makeApiCall() {
-        gapi.client.people.people.get({
-          'resourceName': 'people/me',
-          'requestMask.includeField': 'person.names'
-        }).then(function(resp) {
-          var p = document.createElement('p');
-          var name = resp.result.names[0].givenName;
-          p.appendChild(document.createTextNode('Hello, '+name+'!'));
-          document.getElementById('content').appendChild(p);
-        });
+              gapi.client.init({
+                apiKey: apiKey,
+                discoveryDocs: discoveryDocs,
+                clientId: clientId,
+                scope: scopes
+              }).then(function() {
+                console.log('2');
+              }, function(error) {
+                console.log(error);
+              });
       }
     </script>
     <script async defer src="https://apis.google.com/js/api.js" 
