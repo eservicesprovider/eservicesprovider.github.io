@@ -32,7 +32,7 @@ var appStart = function() {
 var initSigninV2 = function() {
 
   auth2 = gapi.auth2.init({
-      client_id: 'CLIENT_ID.apps.googleusercontent.com',
+      client_id: '146844684925-pa2fsuvmqu4e0s5t95tiila5edncoqom.apps.googleusercontent.com',
       scope: 'profile'
   });
 
@@ -120,7 +120,7 @@ function onSignIn(googleUser) {
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
   //show logout button
-  //$("#google-auth-button").text("<a href='#' onclick='signOut();''>Sign out</a> &nbsp  &nbsp <a class='read' href='app/admin'> Admin </a> <button type='button' class='btn btn-outline-primary'>Primary</button>");	 
+  $("#google-auth-button").text("<a href='#' onclick='signOut();''>Sign out</a> &nbsp  &nbsp <a class='read' href='app/admin'> Admin </a> <button type='button' class='btn btn-outline-primary'>Primary</button>");	 
   $("location").attr('href', 'http://eprofitservice.com/app/admin');
 }
 
@@ -128,7 +128,8 @@ function signOut() {
 	var auth2 = gapi.auth2.getAuthInstance();
 	auth2.signOut().then(function () {
   	console.log('User signed out.');
-});
+  });
+}
 
 
 //account manager
