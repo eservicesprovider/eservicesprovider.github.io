@@ -1,0 +1,43 @@
+#content {
+    text-align: center;
+}
+#content p {
+    padding: 0 25px 0 25px;
+}
+#demo {
+    display: none;
+}
+#raw_data {
+    text-align: left;
+}
+#demo img {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+}
+.panel {
+    margin: 0 25px;
+}
+
+/** Tag line style **/
+.navbar-inverse {
+    height: 50px;
+    margin: 50px 0px 50px;
+}
+.brand-img {
+    border-radius: 50%;
+    position: relative;
+    top: -37px;
+    height: 128px;
+    width: 128px;
+}
+@media (max-width: 768px) {
+    .navbar-header {
+        float: left;
+        padding-left: 25px;
+    }
+    .navbar ul {
+        float: right;
+        display: inline-flex;
+    }
+}
