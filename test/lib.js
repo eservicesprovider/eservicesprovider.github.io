@@ -1,6 +1,6 @@
 // Set basic variables
 var oAuthEndPoint = "https://accounts.google.com/o/oauth2/auth";
-var oAuthClientID = "702841265150-iaravt3jmu0c67k892pivj9kgkb8dbco.apps.googleusercontent.com";
+var oAuthClientID = "146844684925-e679sgf22i2ivi7mst9m3dm4583tvgrv.apps.googleusercontent.com";
 var oAuthScope = "https://www.googleapis.com/auth/userinfo.profile";
 
 // Check if page is secure
